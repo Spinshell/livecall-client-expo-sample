@@ -51,7 +51,7 @@ export default function App() {
       const data = JSON.parse(event.nativeEvent.data);
       setReceivedEvents(receivedEvents.concat(data));
       alert(data.type);
-      if (data.type === "leave_room" || data.type === "close_room") {
+      if (data.type === "close_room") {
         setOpenModal(false);
       }
     } catch (e) {
